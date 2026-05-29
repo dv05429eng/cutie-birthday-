@@ -12,20 +12,18 @@
         body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(180deg, #FFF0F5 0%, #FFE4E1 50%, #FAF0E6 100%);
-            font-size: 1.8rem !important; /* Forcefully 1.8x Bigger base font */
+            font-size: 1.8rem !important;
         }
         .heading-font { font-family: 'Fredoka', sans-serif; }
         
-        /* Butter Smooth Slow Transitions (1.8 Seconds) */
         .step-card {
             display: none; opacity: 0; transform: scale(0.93) translateY(30px);
-            transition: opacity 1.8s cubic-bezier(0.25, 1, 0.5, 1), transform 1.8s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .step-card.active { display: block; opacity: 1; transform: scale(1) translateY(0); }
         
         .cake-tier { border-radius: 2rem 2rem 0 0; box-shadow: inset 0 10px 0 rgba(255,255,255,0.4), 0 8px 16px rgba(0,0,0,0.1); }
         
-        /* Big Candle Flame Shimmer */
         .candle-flame {
             width: 24px; height: 40px; background: linear-gradient(to top, #FF4500, #FFA500, #FFFF00);
             border-radius: 50% 50% 20% 20%; animation: flicker 0.6s infinite alternate;
@@ -43,14 +41,12 @@
         }
         .bg-ambient { animation: customFloat 6s ease-in-out infinite; }
 
-        /* 3D Envelope Flip Open */
         .envelope-wrapper { perspective: 1500px; }
-        .letter-container { transition: transform 1.4s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+        .letter-container { transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
         .letter-container.open-flip { transform: rotateY(180deg); }
         .face-front, .face-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 2rem; }
         .face-back { transform: rotateY(180deg); }
         
-        /* Wishes Flip Nodes */
         .flip-card { perspective: 1200px; }
         .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
         .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
@@ -76,7 +72,7 @@
         <div class="absolute bottom-20 right-14 text-7xl bg-ambient">☁️</div>
     </div>
 
-    <audio id="main-html5-audio" loop></audio>
+    <audio id="main-html5-audio" loop preload="auto"></audio>
 
     <main class="w-full max-w-md bg-[#FFFDF9]/95 rounded-[3.5rem] p-8 shadow-[0_30px_70px_rgba(236,72,153,0.3)] border-2 border-pink-100 my-auto relative z-10">
         
@@ -87,13 +83,13 @@
             </div>
             
             <div class="w-full flex justify-center mb-6">
-                <img src="https://media.tenor.com/On7byw7vS78AAAAi/milk-and-mocha-bear.gif" class="h-48 object-contain" alt="Cute Kitten Welcome">
+                <img src="https://media.tenor.com/On7byw7vS78AAAAi/milk-and-mocha-bear.gif" class="h-48 object-contain" alt="Cute Kitten">
             </div>
 
             <h1 class="font-bold text-[#E75480] heading-font mb-6 leading-tight" style="font-size: 2.4rem !important;">Happy Birthday, Madhu! 🎂</h1>
             <p class="text-gray-600 mb-10 leading-relaxed px-1" style="font-size: 1.45rem !important;">Today is all about celebrating the most amazing person in my world. I've created something beautiful just for you...</p>
             
-            <button onclick="nextStep(2)" class="w-full py-6 px-10 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold rounded-2xl shadow-xl transform active:scale-95 transition-all text-2xl heading-font">
+            <button onclick="nextStep(2)" class="w-full py-6 px-10 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl text-2xl heading-font">
                 Let's Gooo 🚀
             </button>
         </div>
@@ -119,7 +115,7 @@
                 <div id="cake-status-tip" class="absolute bottom-4 bg-white border-2 border-pink-200 px-6 py-2 rounded-full font-bold animate-bounce shadow-md" style="font-size: 1.2rem !important; color:#E75480;">Tap to Blow! 🕯️</div>
             </div>
 
-            <button id="cake-next-trigger" onclick="nextStep(3)" disabled class="w-full py-6 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-xl heading-font transition-all">Blow Candle First 🎂</button>
+            <button id="cake-next-trigger" onclick="nextStep(3)" disabled class="w-full py-6 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-xl heading-font">Blow Candle First 🎂</button>
         </div>
 
         <div id="step-3" class="step-card text-center">
@@ -135,7 +131,7 @@
                 </p>
             </div>
 
-            <button onclick="nextStep(4)" class="w-full py-6 px-8 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl transform active:scale-95 transition-all text-xl heading-font">
+            <button onclick="nextStep(4)" class="w-full py-6 px-8 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl text-xl heading-font">
                 I've Made My Wish! 🌟
             </button>
         </div>
@@ -148,14 +144,14 @@
                 <div id="main-envelope-node" onclick="triggerLetterOpenSequence()" class="letter-container w-full h-64 cursor-pointer relative">
                     <div class="face-front bg-gradient-to-br from-pink-100 to-rose-50 border-4 border-dashed border-pink-300 flex flex-col items-center justify-center shadow-lg p-4">
                         <div class="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center text-white text-6xl shadow-md animate-bounce">✉️</div>
-                        <p class="font-bold text-pink-600 mt-6 tracking-widest uppercase animate-pulse" style="font-size: 1.2rem !important;">Tap to Open Letter Box</p>
+                        <p class="font-bold text-pink-600 mt-6 tracking-widest uppercase" style="font-size: 1.2rem !important;">Tap to Open Letter Box</p>
                     </div>
                     <div class="face-back bg-white border-2 border-pink-100 rounded-3xl p-6 shadow-2xl flex flex-col justify-between text-left">
                         <div>
                             <span class="text-pink-500 font-bold heading-font" style="font-size: 1.3rem !important;">💝 Opened Letter:</span>
                             <p class="text-gray-600 italic mt-3 leading-relaxed" style="font-size: 1.25rem !important;">"Today marks another year of your incredible existence, and I couldn't be more grateful. You bring so much joy, laughter, and love into my life..."</p>
                         </div>
-                        <p class="text-pink-400 font-bold text-center mt-2 animate-pulse" style="font-size: 1.1rem !important;">Letter Unlocked! Click Next 📜</p>
+                        <p class="text-pink-400 font-bold text-center mt-2" style="font-size: 1.1rem !important;">Letter Unlocked! Click Next 📜</p>
                     </div>
                 </div>
             </div>
@@ -184,7 +180,7 @@
 
             <div class="bg-white rounded-[2.5rem] p-6 border border-gray-100 text-center shadow-lg">
                 <h3 id="deck-title" class="font-bold text-gray-800" style="font-size: 1.5rem !important;">Dil Ka Jo Haal Hai</h3>
-                <p id="deck-desc" class="text-amber-600 mt-1" style="font-size: 1.2rem !important;">Here's to making this year unforgettable 🌟</p>
+                <p class="text-amber-600 mt-1" style="font-size: 1.2rem !important;">Here's to making this year unforgettable 🌟</p>
                 
                 <div class="flex flex-col items-center justify-center my-6">
                     <button id="play-trigger-btn" onclick="toggleRealHTML5MusicEngine()" class="w-28 h-28 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center text-5xl font-bold shadow-2xl transform active:scale-90 transition-transform">▶️</button>
@@ -192,8 +188,8 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-6 mt-4">
-                    <button onclick="shiftIsolatedAudioStream(-1)" class="py-4 bg-pink-50 text-pink-600 font-bold text-3xl shadow-md rounded-2xl flex items-center justify-center">&lt; Back</button>
-                    <button onclick="shiftIsolatedAudioStream(1)" class="py-4 bg-pink-50 text-pink-600 font-bold text-3xl shadow-md rounded-2xl flex items-center justify-center">Next &gt;</button>
+                    <button onclick="shiftIsolatedAudioStream(-1)" class="py-4 bg-pink-50 text-pink-600 font-bold text-2xl shadow-md rounded-2xl flex items-center justify-center">&lt; Back</button>
+                    <button onclick="shiftIsolatedAudioStream(1)" class="py-4 bg-pink-50 text-pink-600 font-bold text-2xl shadow-md rounded-2xl flex items-center justify-center">Next &gt;</button>
                 </div>
             </div>
             
@@ -255,7 +251,6 @@
             </div>
 
             <h3 class="font-bold text-pink-600 heading-font text-2xl">Forever Yours, Happy Birthday! 💕🎂</h3>
-            
             <p class="font-bold font-mono mt-4 bg-rose-50 border border-rose-200 py-2 px-6 rounded-full inline-block shadow-sm" style="font-size: 1.35rem !important; color: #E75480;">Saturday, May 30, 2026</p>
 
             <div class="space-y-4 mt-8">
@@ -275,17 +270,15 @@
     </div>
 
     <script>
-        // 100% WORKING REAL BACKGROUND AUDIO SOURCES (Direct High-Speed MP3 Streams)
+        // Real copyright-free dynamic high-speed stream audio endpoints
         const musicStreams = [
-            { title: "Dil Ka Jo Haal Hai", desc: "Here's to making this year unforgettable 🌟", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" }, 
-            { title: "Dil Cheeze Tujhe Dedi", desc: "Because today is all about YOU, Madhu! 👑", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-            { title: "If the world was ending...", desc: "Every beat celebrates your beautiful heart 💖", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" }
+            { title: "Dil Ka Jo Haal Hai", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" }, 
+            { title: "Dil Cheeze Tujhe Dedi", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+            { title: "If the world was ending...", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" }
         ];
 
         let activeTrackIdx = 0;
         const audioEngine = document.getElementById('main-html5-audio');
-
-        // Set initial stream target source pipeline
         audioEngine.src = musicStreams[activeTrackIdx].src;
 
         function nextStep(stepNumber) {
@@ -309,7 +302,7 @@
             document.getElementById('candle-flame-core').style.display = 'none';
             document.getElementById('physical-candle').style.transform = 'scaleY(0.4)';
             document.getElementById('cake-status-tip').innerText = "Wish Sent Safely! 🎉🍰";
-            document.getElementById('cake-status-tip').className = "absolute bottom-4 bg-emerald-100 border border-emerald-400 px-6 py-1.5 rounded-full text-sm text-emerald-700 font-bold shadow-sm";
+            document.getElementById('cake-status-tip').className = "absolute bottom-4 bg-emerald-100 border border-emerald-400 px-6 py-2 rounded-full text-sm text-emerald-700 font-bold shadow-sm";
             
             const btn = document.getElementById('cake-next-trigger');
             btn.disabled = false;
@@ -325,18 +318,18 @@
             btn.innerText = "Listen To Birthday Playlist 🎵";
         }
 
-        // 🎵 100% INSTANT NATIVE AUDIO CONTROLLERS (No YouTube errors anymore!)
         function toggleRealHTML5MusicEngine() {
             const btn = document.getElementById('play-trigger-btn');
-            
             if (audioEngine.paused) { 
-                audioEngine.play().then(() => {
-                    btn.innerText = "⏸️";
-                    document.getElementById('audio-status-lbl').innerText = "Playing real track seamlessly... 💕";
-                    launchProgressEngine();
-                }).catch(e => {
-                    alert("Please click the play button again to active native system audio track channels!");
-                });
+                audioEngine.play();
+                btn.innerText = "⏸️";
+                document.getElementById('audio-status-lbl').innerText = "Playing real track seamlessly... 💕";
+                setInterval(() => {
+                    if (!audioEngine.paused) {
+                        const pct = (audioEngine.currentTime / audioEngine.duration) * 100;
+                        document.getElementById('audio-fill-track').style.width = pct + '%';
+                    }
+                }, 500);
             } else {
                 audioEngine.pause();
                 btn.innerText = "▶️";
@@ -345,28 +338,13 @@
 
         function shiftIsolatedAudioStream(direction) {
             activeTrackIdx = (activeTrackIdx + direction + musicStreams.length) % musicStreams.length;
-            
             document.getElementById('audio-track-lbl').innerText = musicStreams[activeTrackIdx].title;
             document.getElementById('deck-title').innerText = musicStreams[activeTrackIdx].title;
-            document.getElementById('deck-desc').innerText = musicStreams[activeTrackIdx].desc;
             
             audioEngine.src = musicStreams[activeTrackIdx].src;
-            audioEngine.play().then(() => {
-                document.getElementById('play-trigger-btn').innerText = "⏸️";
-                document.getElementById('audio-status-lbl').innerText = "Track changed successfully... ✨";
-                launchProgressEngine();
-            }).catch(e => {
-                document.getElementById('play-trigger-btn').innerText = "▶️";
-            });
-        }
-
-        function launchProgressEngine() {
-            setInterval(() => {
-                if (!audioEngine.paused) {
-                    const pct = (audioEngine.currentTime / audioEngine.duration) * 100;
-                    document.getElementById('audio-fill-track').style.width = pct + '%';
-                }
-            }, 500);
+            audioEngine.play();
+            document.getElementById('play-trigger-btn').innerText = "⏸️";
+            document.getElementById('audio-status-lbl').innerText = "Track changed successfully... ✨";
         }
 
         const verifiedCardsMap = { 1: false, 2: false, 3: false };
