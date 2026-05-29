@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Madhu! ✨</title>
+    <title>Happy Birthday, My Queen! ✨</title>
     
     <script>window.onerror = function() { return true; };</script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -17,10 +17,10 @@
         }
         .heading-font { font-family: 'Fredoka', sans-serif; }
         
-        /* Ultra Slow & Soft Smooth Transitions (As Requested) */
+        /* Premium Ultra Soft Step Transitions */
         .step-card {
-            display: none; opacity: 0; transform: scale(0.95) translateY(20px);
-            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            display: none; opacity: 0; transform: scale(0.96) translateY(15px);
+            transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .step-card.active { display: block; opacity: 1; transform: scale(1) translateY(0); }
         
@@ -41,15 +41,15 @@
         /* Ambient Floating Objects Layer Background */
         @keyframes customFloat {
             0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+            50% { transform: translateY(-15px) rotate(8deg); }
             100% { transform: translateY(0px) rotate(0deg); }
         }
-        .bg-ambient { animation: customFloat 6s ease-in-out infinite; }
+        .bg-ambient { animation: customFloat 5s ease-in-out infinite; }
 
         /* Premium Letterbox Envelope Flip Open */
         .envelope-wrapper { perspective: 1200px; }
         .letter-container {
-            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
         }
         .letter-container.open-flip { transform: rotateY(180deg); }
@@ -63,7 +63,7 @@
         .flip-card { perspective: 1000px; }
         .flip-card-inner {
             position: relative; width: 100%; height: 100%;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d;
         }
         .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
         .flip-card-front, .flip-card-back {
@@ -74,11 +74,11 @@
 
         .kiss-particle {
             position: absolute; font-size: 3.5rem; bottom: 0;
-            animation: luxuryFlyUp 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; pointer-events: none; z-index: 100;
+            animation: luxuryFlyUp 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; pointer-events: none; z-index: 100;
         }
         @keyframes luxuryFlyUp {
             0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-450px) scale(1.4) rotate(30deg); opacity: 0; }
+            100% { transform: translateY(-420px) scale(1.4) rotate(30deg); opacity: 0; }
         }
     </style>
 </head>
@@ -99,7 +99,7 @@
     <main class="w-full max-w-sm bg-[#FFFDF9]/95 rounded-[2.8rem] p-8 shadow-[0_25px_60px_-15px_rgba(236,72,153,0.2)] border border-pink-100/90 my-auto relative z-10 backdrop-blur-sm">
         
         <div id="step-1" class="step-card active text-center">
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex justify-between items-center mb-8">
                 <div class="flex space-x-2">
                     <span class="w-3.5 h-3.5 rounded-full bg-pink-400 animate-pulse"></span>
                     <span class="w-3.5 h-3.5 rounded-full bg-yellow-400"></span>
@@ -107,13 +107,8 @@
                 <span class="text-xs font-bold text-purple-900/60 heading-font tracking-widest uppercase">Special Gift</span>
                 <span class="text-2xl animate-bounce">✨</span>
             </div>
-            
-            <div class="w-full flex justify-center mb-4">
-                <img src="https://media.tenor.com/7p_8bL-oW7wAAAAi/milk-and-mocha-bear.gif" class="h-28 object-contain" alt="Cute Bear GIF">
-            </div>
-
-            <h1 class="text-4xl font-bold text-[#E75480] heading-font mb-4 leading-tight">Happy Birthday, Madhu! 🎂 ✨</h1>
-            <p class="text-gray-600 text-sm mb-8 leading-relaxed px-1">Today is all about celebrating the most amazing person in my world. I've created something magical just for you on your special day...</p>
+            <h1 class="text-4xl font-bold text-[#E75480] heading-font mb-5 leading-tight">Happy Birthday, Beautiful! 🎂 ✨</h1>
+            <p class="text-gray-600 text-sm mb-10 leading-relaxed px-1">Today is all about celebrating the most amazing person in my world. I've created something magical just for you on your special day...</p>
             
             <button onclick="nextStep(2)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold text-xl rounded-2xl shadow-[0_10px_25px_rgba(236,72,153,0.4)] transform active:scale-95 transition-all heading-font tracking-wide">
                 Let's Gooo 🚀
@@ -121,7 +116,7 @@
         </div>
 
         <div id="step-2" class="step-card text-center">
-            <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">Cut the Cake, Madhu! 🎂</h2>
+            <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">Make Your Wish! 🎂</h2>
             <p class="text-xs text-pink-400 mb-6">Tap the cake to softly blow the candle</p>
             
             <div onclick="extinguishCandleCake()" class="cursor-pointer py-6 flex flex-col items-center justify-center bg-gradient-to-b from-amber-50/20 to-rose-50/20 border border-pink-100/60 rounded-[2rem] shadow-inner min-h-[260px] relative mb-6">
@@ -146,26 +141,8 @@
         </div>
 
         <div id="step-3" class="step-card text-center">
-            <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-3">Make A Wish, Madhu! ✨</h2>
-            
-            <div class="w-full flex justify-center mb-5">
-                <img src="https://media.tenor.com/y8_9xXqB070AAAAi/mocha-cute.gif" class="h-32 object-contain" alt="Cute Wish GIF">
-            </div>
-
-            <div class="bg-pink-50/50 rounded-2xl p-5 mb-8 border border-pink-100 shadow-inner">
-                <p class="text-gray-600 text-sm leading-relaxed italic">
-                    "Close your eyes for 5 seconds, think about all your beautiful dreams for this year, and hold them in your heart..." 💫
-                </p>
-            </div>
-
-            <button onclick="nextStep(4)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold text-lg rounded-2xl shadow-lg transform active:scale-95 transition-all heading-font">
-                I've Made My Wish! ❤️
-            </button>
-        </div>
-
-        <div id="step-4" class="step-card text-center">
             <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">A Birthday Love Letter 💌</h2>
-            <p class="text-xs text-pink-400 mb-6 tracking-wider">From my heart to Madhu</p>
+            <p class="text-xs text-pink-400 mb-6 tracking-wider">From my heart to the birthday queen</p>
             
             <div class="envelope-wrapper w-full min-h-[230px] my-4 relative flex items-center justify-center">
                 <div id="main-envelope-node" onclick="triggerLetterOpenSequence()" class="letter-container w-full h-50 cursor-pointer relative">
@@ -183,11 +160,11 @@
                 </div>
             </div>
             
-            <button id="envelope-next-btn" onclick="nextStep(5)" disabled class="w-full py-5 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-base heading-font transform active:scale-95 transition-all">Open Envelope First 🔒</button>
+            <button id="envelope-next-btn" onclick="nextStep(4)" disabled class="w-full py-5 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-base heading-font transform active:scale-95 transition-all">Open Envelope First 🔒</button>
         </div>
 
-        <div id="step-5" class="step-card">
-            <h2 class="text-xl font-bold text-[#E75480] heading-font text-center mb-4">Madhu's Birthday Playlist 🎵</h2>
+        <div id="step-4" class="step-card">
+            <h2 class="text-xl font-bold text-[#E75480] heading-font text-center mb-4">Your Birthday Playlist 🎵</h2>
             
             <div class="bg-white rounded-2xl p-4 mb-5 border border-pink-100 flex flex-col space-y-3 shadow-md">
                 <div class="flex items-center justify-between">
@@ -198,7 +175,7 @@
                             <p id="audio-status-lbl" class="text-[10px] text-pink-500 font-medium animate-pulse">Press play to launch music...</p>
                         </div>
                     </div>
-                    <button id="play-trigger-btn" onclick="toggleRealYTMusic()" class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center text-xl font-bold shadow-xl transform active:scale-90 transition-all">▶️</button>
+                    <button id="play-trigger-btn" onclick="toggleRealYTMusic()" class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center text-base font-bold shadow-md transform active:scale-90 transition-all">▶️</button>
                 </div>
                 <div class="flex items-center space-x-2 pt-1">
                     <span id="current-time-lbl" class="text-[10px] text-gray-400 font-mono">0:00</span>
@@ -214,15 +191,15 @@
                 <h3 id="deck-title" class="font-bold text-gray-800 text-base">Dil Ka Jo Haal Hai</h3>
                 <p id="deck-desc" class="text-xs text-amber-600 mt-1">Here's to making this year unforgettable 🌟</p>
                 <div class="flex justify-center space-x-8 mt-5">
-                    <button onclick="shiftDeckFrame(-1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&lt;</button>
-                    <button onclick="shiftDeckFrame(1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&gt;</button>
+                    <button onclick="shiftDeckFrame(-1)" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 font-bold text-xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&lt;</button>
+                    <button onclick="shiftDeckFrame(1)" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 font-bold text-xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&gt;</button>
                 </div>
             </div>
             
-            <button onclick="nextStep(6);" class="w-full mt-6 py-5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl text-base heading-font transform active:scale-95 transition-all">Continue Surprises ✨</button>
+            <button onclick="nextStep(5);" class="w-full mt-6 py-5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl shadow-xl text-base heading-font transform active:scale-95 transition-all">Continue Surprises ✨</button>
         </div>
 
-        <div id="step-6" class="step-card">
+        <div id="step-5" class="step-card">
             <h2 class="text-xl font-bold text-[#E75480] heading-font text-center mb-1">Birthday Wishes Cards 🎁</h2>
             <p class="text-[11px] text-gray-400 text-center mb-5">Tap all 3 customized premium flip nodes</p>
             
@@ -249,7 +226,7 @@
             <button onclick="evaluateWishesUnlockedState()" class="w-full mt-7 py-5 bg-[#EC4899] text-white font-bold rounded-2xl shadow-xl text-base heading-font transform active:scale-95 transition-all">Finish Wishes View 🎁</button>
         </div>
 
-        <div id="step-7" class="step-card">
+        <div id="step-6" class="step-card">
             <h2 class="text-xl font-bold text-[#E75480] heading-font text-center mb-1">Final Birthday Letter</h2>
             <p class="text-[11px] text-pink-400 text-center mb-5">Sealed with true love & care 💕</p>
             
@@ -258,30 +235,29 @@
                     <span>💌</span> <span class="tracking-wider uppercase">Final Birthday Love Letter</span>
                 </div>
                 <div class="space-y-4 text-xs text-gray-700 leading-relaxed font-medium">
-                    <p class="italic text-pink-500 font-bold not-italic">My dearest Madhu,</p>
+                    <p class="italic text-pink-500 font-bold not-italic">My dearest birthday princess,</p>
                     <p class="italic">May this new year bring you everything your heart desires and more joy than you can ever imagine.</p>
-                    <p class="text-cyan-700 bg-cyan-50/60 p-3 rounded-xl border border-cyan-100/50 font-bold shadow-inner">Happy Birthday, Madhu. You deserve the world and so much more. 🎂✨</p>
+                    <p class="text-cyan-700 bg-cyan-50/60 p-3 rounded-xl border border-cyan-100/50 font-bold shadow-inner">Happy Birthday, my love. You deserve the world and so much more. 🎂✨</p>
                 </div>
             </div>
             
             <div class="grid grid-cols-2 gap-4 mt-7">
-                <button onclick="nextStep(8)" class="py-5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-bold rounded-2xl text-xs heading-font shadow-md transform active:scale-95 transition-all">Seal Letter 🎂</button>
+                <button onclick="nextStep(7)" class="py-5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-bold rounded-2xl text-xs heading-font shadow-md transform active:scale-95 transition-all">Seal Letter 🎂</button>
                 <button onclick="nextStep(1)" class="py-5 bg-gradient-to-r from-emerald-400 to-teal-400 text-white font-bold rounded-2xl text-xs heading-font shadow-md transform active:scale-95 transition-all">Play Again</button>
             </div>
         </div>
 
-        <div id="step-8" class="step-card text-center relative">
+        <div id="step-7" class="step-card text-center relative">
             <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-inner animate-pulse">💝</div>
             <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">Sealed with Love</h2>
-            <p class="text-sm text-gray-500 font-medium">Happy Birthday, Madhu 🎉</p>
+            <p class="text-sm text-gray-500 font-medium">Happy Birthday, My Everything 🎉</p>
             
             <div class="flex justify-center space-x-1.5 text-pink-400 text-base my-5">
                 <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
             </div>
 
             <h3 class="text-lg font-bold text-pink-600 heading-font">Forever Yours, Happy Birthday! 💕🎂</h3>
-            
-            <p class="text-xs text-rose-500 font-bold font-mono mt-2 bg-rose-50 py-1 px-3 rounded-full inline-block">Saturday, May 30, 2026</p>
+            <p class="text-xs text-gray-400 font-mono mt-1">Friday, May 29, 2026</p>
 
             <div class="space-y-4 mt-8">
                 <button onclick="nextStep(1)" class="w-full py-5 bg-[#EC4899] text-white font-bold rounded-2xl text-base heading-font shadow-xl transform active:scale-95 transition-all">Experience Magic Again ✨</button>
@@ -295,7 +271,7 @@
         <div class="bg-white rounded-[2.5rem] p-7 text-center max-w-xs w-full shadow-2xl border border-pink-100 transform scale-95 transition-transform duration-300">
             <span class="text-5xl animate-bounce inline-block">🎉</span>
             <h3 class="text-2xl font-bold text-[#E75480] heading-font mt-3">Wishes Unlocked!</h3>
-            <button onclick="document.getElementById('congrats-modal').classList.add('hidden'); nextStep(7);" class="w-full mt-6 py-5 bg-[#EC4899] text-white font-bold rounded-2xl text-base heading-font shadow-lg transform active:scale-95">Open Final Letter ✉️</button>
+            <button onclick="document.getElementById('congrats-modal').classList.add('hidden'); nextStep(6);" class="w-full mt-6 py-5 bg-[#EC4899] text-white font-bold rounded-2xl text-base heading-font shadow-lg transform active:scale-95">Open Final Letter ✉️</button>
         </div>
     </div>
 
@@ -306,12 +282,11 @@
 
         const deckCollection = [
             { title: "Dil Ka Jo Haal Hai", desc: "Here's to making this year unforgettable 🌟", avatar: "🕷️❤️🐱", id: "udgrClXV26Y", start: 45 }, 
-            { title: "Dil Cheeze Tujhe Dedi", desc: "Because today is all about YOU, Madhu! 👑", avatar: "🛗🕷️🎀", id: "S0Z7gZqre1g", start: 20 },
+            { title: "Dil Cheeze Tujhe Dedi", desc: "Because today is all about YOU, queen! 👑", avatar: "🛗🕷️🎀", id: "S0Z7gZqre1g", start: 20 },
             { title: "If the world was ending...", desc: "Every beat celebrates your beautiful heart 💖", avatar: "1jO2Anu8y_I", id: "1jO2Anu8y_I", start: 60 }
         ];
 
         function onYouTubeIframeAPIReady() {
-            if(ytPlayer) return; 
             ytPlayer = new YT.Player('yt-bg-player-frame', {
                 height: '0', width: '0',
                 videoId: deckCollection[activeDeckIdx].id,
@@ -319,16 +294,11 @@
             });
         }
 
-        // Initialize Player on first click if API loads slowly
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => { if(typeof YT !== 'undefined' && YT.Player) onYouTubeIframeAPIReady(); }, 1500);
-        });
-
         function nextStep(stepNumber) {
             const activeCard = document.querySelector('.step-card.active');
             if (activeCard) {
                 activeCard.style.opacity = '0';
-                activeCard.style.transform = 'scale(0.95) translateY(-15px)';
+                activeCard.style.transform = 'scale(0.96) translateY(-10px)';
                 setTimeout(() => {
                     activeCard.classList.remove('active');
                     const nextCard = document.getElementById(`step-${stepNumber}`);
@@ -337,7 +307,7 @@
                         nextCard.style.opacity = '1';
                         nextCard.style.transform = 'scale(1) translateY(0)';
                     }, 50);
-                }, 600); // Slower animation timings
+                }, 400);
             }
         }
 
@@ -350,7 +320,7 @@
             const btn = document.getElementById('cake-next-trigger');
             btn.disabled = false;
             btn.className = "w-full py-5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl text-base heading-font shadow-xl transform active:scale-95 transition-all duration-150";
-            btn.innerText = "Make A Wish ✨";
+            btn.innerText = "Open My Birthday Letter 💌";
         }
 
         function triggerLetterOpenSequence() {
@@ -367,7 +337,7 @@
             const btn = document.getElementById('play-trigger-btn');
             if (!ytPlayer || typeof ytPlayer.getPlayerState !== 'function') {
                 onYouTubeIframeAPIReady();
-                return alert("Syncing real tracks engine... Please tap again in 1 second!");
+                return alert("Syncing real songs engine... Please tap again in 1 second!");
             }
 
             const state = ytPlayer.getPlayerState();
@@ -383,7 +353,6 @@
             }
         }
 
-        // 🎵 FIXED STABLE FORCE MULTI-TRACK LOADING LOGIC
         function shiftDeckFrame(step) {
             activeDeckIdx = (activeDeckIdx + step + deckCollection.length) % deckCollection.length;
             
@@ -392,9 +361,8 @@
             document.getElementById('deck-desc').innerText = deckCollection[activeDeckIdx].desc;
             document.getElementById('deck-avatar').innerText = deckCollection[activeDeckIdx].avatar;
             
-            if (ytPlayer) {
+            if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
                 clearInterval(progressInterval);
-                // Strong re-load command to shift state force-fully bypass cached links
                 ytPlayer.loadVideoById({
                     videoId: deckCollection[activeDeckIdx].id,
                     startSeconds: deckCollection[activeDeckIdx].start
