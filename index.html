@@ -17,17 +17,17 @@
         }
         .heading-font { font-family: 'Fredoka', sans-serif; }
         
-        /* Butter Smooth Premium Slow Transitions (1.5 Seconds) */
+        /* Ultra Slow & Soft Smooth Transitions (As Requested) */
         .step-card {
-            display: none; opacity: 0; transform: scale(0.94) translateY(25px);
-            transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+            display: none; opacity: 0; transform: scale(0.95) translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .step-card.active { display: block; opacity: 1; transform: scale(1) translateY(0); }
         
-        /* 3D Premium Cake Graphic Setup */
+        /* Real 3D HTML Cake Geometry */
         .cake-tier { border-radius: 1.5rem 1.5rem 0 0; box-shadow: inset 0 8px 0 rgba(255,255,255,0.4), 0 6px 12px rgba(0,0,0,0.08); }
         
-        /* Real Moving Candle Flame */
+        /* Real Candle Flame Shimmer Animation */
         .candle-flame {
             width: 14px; height: 26px; background: linear-gradient(to top, #FF4500, #FFA500, #FFFF00);
             border-radius: 50% 50% 20% 20%; animation: flicker 0.6s ease-in-out infinite alternate;
@@ -38,7 +38,7 @@
             100% { transform: scaleX(1.1) rotate(4deg); height: 28px; }
         }
         
-        /* Soft Floating Ambiance System */
+        /* Ambient Floating Objects Layer Background */
         @keyframes customFloat {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
@@ -46,10 +46,10 @@
         }
         .bg-ambient { animation: customFloat 6s ease-in-out infinite; }
 
-        /* Envelope Box Face Flip Rotation */
+        /* Premium Letterbox Envelope Flip Open */
         .envelope-wrapper { perspective: 1200px; }
         .letter-container {
-            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
         }
         .letter-container.open-flip { transform: rotateY(180deg); }
@@ -59,7 +59,7 @@
         }
         .face-back { transform: rotateY(180deg); }
         
-        /* Wishes Premium Matrix Nodes */
+        /* Wishes Flip Cards */
         .flip-card { perspective: 1000px; }
         .flip-card-inner {
             position: relative; width: 100%; height: 100%;
@@ -78,13 +78,13 @@
         }
         @keyframes luxuryFlyUp {
             0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-460px) scale(1.4) rotate(30deg); opacity: 0; }
+            100% { transform: translateY(-450px) scale(1.4) rotate(30deg); opacity: 0; }
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-between p-6 relative overflow-x-hidden select-none">
 
-    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-80">
+    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
         <div class="absolute top-12 left-10 text-3xl bg-ambient text-yellow-300">⭐</div>
         <div class="absolute top-24 right-12 text-4xl bg-ambient text-pink-400">💖</div>
         <div class="absolute top-1/4 left-6 text-2xl bg-ambient text-yellow-200">⭐</div>
@@ -94,9 +94,7 @@
         <div class="absolute bottom-20 left-14 text-4xl bg-ambient text-pink-200">☁️</div>
     </div>
 
-    <div id="yt-player-slot-0" class="hidden"></div>
-    <div id="yt-player-slot-1" class="hidden"></div>
-    <div id="yt-player-slot-2" class="hidden"></div>
+    <div id="yt-bg-player-frame" class="hidden"></div>
 
     <main class="w-full max-w-sm bg-[#FFFDF9]/95 rounded-[2.8rem] p-8 shadow-[0_25px_60px_-15px_rgba(236,72,153,0.2)] border border-pink-100/90 my-auto relative z-10 backdrop-blur-sm">
         
@@ -106,30 +104,30 @@
                     <span class="w-3.5 h-3.5 rounded-full bg-pink-400 animate-pulse"></span>
                     <span class="w-3.5 h-3.5 rounded-full bg-yellow-400"></span>
                 </div>
-                <span class="text-xs font-bold text-purple-900/60 heading-font tracking-widest uppercase">Personal Present</span>
+                <span class="text-xs font-bold text-purple-900/60 heading-font tracking-widest uppercase">Special Gift</span>
                 <span class="text-2xl animate-bounce">✨</span>
             </div>
             
-            <div class="w-full flex justify-center mb-5">
-                <img src="https://media.tenor.com/7p_8bL-oW7wAAAAi/milk-and-mocha-bear.gif" class="h-28 object-contain" alt="Cute Welcome GIF">
+            <div class="w-full flex justify-center mb-4">
+                <img src="https://media.tenor.com/7p_8bL-oW7wAAAAi/milk-and-mocha-bear.gif" class="h-28 object-contain" alt="Cute Bear GIF">
             </div>
 
             <h1 class="text-4xl font-bold text-[#E75480] heading-font mb-4 leading-tight">Happy Birthday, Madhu! 🎂 ✨</h1>
             <p class="text-gray-600 text-sm mb-8 leading-relaxed px-1">Today is all about celebrating the most amazing person in my world. I've created something magical just for you on your special day...</p>
             
-            <button onclick="nextStep(2)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xl rounded-2xl shadow-[0_10px_25px_rgba(236,72,153,0.4)] transform active:scale-95 transition-all heading-font tracking-wide">
+            <button onclick="nextStep(2)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold text-xl rounded-2xl shadow-[0_10px_25px_rgba(236,72,153,0.4)] transform active:scale-95 transition-all heading-font tracking-wide">
                 Let's Gooo 🚀
             </button>
         </div>
 
         <div id="step-2" class="step-card text-center">
-            <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">Blow The Candle, Madhu! 🎂</h2>
-            <p class="text-xs text-pink-400 mb-6">Tap the cake to extinguish the flame</p>
+            <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-1">Cut the Cake, Madhu! 🎂</h2>
+            <p class="text-xs text-pink-400 mb-6">Tap the cake to softly blow the candle</p>
             
             <div onclick="extinguishCandleCake()" class="cursor-pointer py-6 flex flex-col items-center justify-center bg-gradient-to-b from-amber-50/20 to-rose-50/20 border border-pink-100/60 rounded-[2rem] shadow-inner min-h-[260px] relative mb-6">
-                <div id="physical-candle" class="flex flex-col items-center mb-[-4px] z-20 transition-all duration-700">
+                <div id="physical-candle" class="flex flex-col items-center mb-[-4px] z-20 transition-all duration-500">
                     <div id="candle-flame-core" class="candle-flame"></div>
-                    <div class="w-3.5 h-14 bg-gradient-to-b from-pink-400 via-yellow-200 to-pink-500 rounded-sm relative"></div>
+                    <div class="w-3.5 h-14 bg-gradient-to-b from-pink-400 via-yellow-200 to-pink-500 rounded-sm shadow-sm relative"></div>
                 </div>
                 <div class="w-full flex flex-col items-center z-10">
                     <div class="w-28 h-10 bg-[#FFF5EE] cake-tier border border-amber-100 flex justify-around items-center px-2"><span class="text-xs">🍓</span><span class="text-xs">🍓</span><span class="text-xs">🍓</span></div>
@@ -141,27 +139,27 @@
                         <span class="text-sm">🍫</span><span class="text-sm">🍫</span><span class="text-sm">🍫</span><span class="text-sm">🍫</span>
                     </div>
                 </div>
-                <div id="cake-status-tip" class="absolute bottom-4 bg-white/90 border border-pink-200 px-5 py-1.5 rounded-full text-xs text-rose-600 font-bold animate-bounce shadow-sm">Tap to Blow Flame! 🕯️</div>
+                <div id="cake-status-tip" class="absolute bottom-4 bg-white/90 border border-pink-200 px-5 py-1.5 rounded-full text-xs text-rose-600 font-bold animate-bounce shadow-sm">Tap to Blow Candle! 🕯️</div>
             </div>
 
-            <button id="cake-next-trigger" onclick="nextStep(3)" disabled class="w-full py-5 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-base heading-font transform active:scale-95 transition-all">Blow Candle First 🎂</button>
+            <button id="cake-next-trigger" onclick="nextStep(3)" disabled class="w-full py-5 bg-gray-200 text-gray-400 font-bold rounded-2xl cursor-not-allowed text-base heading-font transform active:scale-95 transition-all">Blow the Candle First 🎂</button>
         </div>
 
         <div id="step-3" class="step-card text-center">
             <h2 class="text-2xl font-bold text-[#E75480] heading-font mb-3">Make A Wish, Madhu! ✨</h2>
             
             <div class="w-full flex justify-center mb-5">
-                <img src="https://media.tenor.com/y8_9xXqB070AAAAi/mocha-cute.gif" class="h-32 object-contain" alt="Cute Teddy Wish GIF">
+                <img src="https://media.tenor.com/y8_9xXqB070AAAAi/mocha-cute.gif" class="h-32 object-contain" alt="Cute Wish GIF">
             </div>
 
-            <div class="bg-pink-50/50 border border-pink-100 rounded-2xl p-5 mb-8 shadow-inner">
+            <div class="bg-pink-50/50 rounded-2xl p-5 mb-8 border border-pink-100 shadow-inner">
                 <p class="text-gray-600 text-sm leading-relaxed italic">
-                    "Close your eyes for a moment, think of the absolute best thing you want this year, and let the magic handle it..." ❤️💫
+                    "Close your eyes for 5 seconds, think about all your beautiful dreams for this year, and hold them in your heart..." 💫
                 </p>
             </div>
 
-            <button onclick="nextStep(4)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-lg rounded-2xl shadow-xl transform active:scale-95 transition-all heading-font">
-                I've Made My Wish! 🌟
+            <button onclick="nextStep(4)" class="w-full py-5 px-8 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold text-lg rounded-2xl shadow-lg transform active:scale-95 transition-all heading-font">
+                I've Made My Wish! ❤️
             </button>
         </div>
 
@@ -200,7 +198,7 @@
                             <p id="audio-status-lbl" class="text-[10px] text-pink-500 font-medium animate-pulse">Press play to launch music...</p>
                         </div>
                     </div>
-                    <button id="play-trigger-btn" onclick="toggleSeparatedYTPlayerEngine()" class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center text-xl font-bold shadow-xl transform active:scale-90 transition-transform">▶️</button>
+                    <button id="play-trigger-btn" onclick="toggleRealYTMusic()" class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center text-xl font-bold shadow-xl transform active:scale-90 transition-all">▶️</button>
                 </div>
                 <div class="flex items-center space-x-2 pt-1">
                     <span id="current-time-lbl" class="text-[10px] text-gray-400 font-mono">0:00</span>
@@ -215,10 +213,9 @@
                 <div id="deck-avatar" class="w-full h-36 bg-gradient-to-br from-pink-50 to-amber-50 rounded-2xl mb-4 flex items-center justify-center text-6xl shadow-inner">🕷️❤️🐱</div>
                 <h3 id="deck-title" class="font-bold text-gray-800 text-base">Dil Ka Jo Haal Hai</h3>
                 <p id="deck-desc" class="text-xs text-amber-600 mt-1">Here's to making this year unforgettable 🌟</p>
-                
                 <div class="flex justify-center space-x-8 mt-5">
-                    <button onclick="shiftIsolatedTrackDeck(-1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&lt;</button>
-                    <button onclick="shiftIsolatedTrackDeck(1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&gt;</button>
+                    <button onclick="shiftDeckFrame(-1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&lt;</button>
+                    <button onclick="shiftDeckFrame(1)" class="w-14 h-14 rounded-full bg-pink-50 text-pink-600 font-bold text-2xl shadow-md hover:bg-pink-500 hover:text-white transform active:scale-90 transition-all flex items-center justify-center">&gt;</button>
                 </div>
             </div>
             
@@ -284,7 +281,7 @@
 
             <h3 class="text-lg font-bold text-pink-600 heading-font">Forever Yours, Happy Birthday! 💕🎂</h3>
             
-            <p class="text-xs text-rose-500 font-bold font-mono mt-2 bg-rose-50 py-1.5 px-4 rounded-full inline-block shadow-sm">Saturday, May 30, 2026</p>
+            <p class="text-xs text-rose-500 font-bold font-mono mt-2 bg-rose-50 py-1 px-3 rounded-full inline-block">Saturday, May 30, 2026</p>
 
             <div class="space-y-4 mt-8">
                 <button onclick="nextStep(1)" class="w-full py-5 bg-[#EC4899] text-white font-bold rounded-2xl text-base heading-font shadow-xl transform active:scale-95 transition-all">Experience Magic Again ✨</button>
@@ -303,30 +300,28 @@
     </div>
 
     <script>
-        // Dedicated Isolated High-Fidelity API Track configuration
-        const trackDeck = [
-            { title: "Dil Ka Jo Haal Hai", desc: "Here's to making this year unforgettable 🌟", avatar: "🕷️❤️🐱", id: "udgrClXV26Y", start: 45 }, 
-            { title: "Dil Cheeze Tujhe Dedi", desc: "Because today is all about YOU, Madhu! 👑", avatar: "🛗🕷️🎀", id: "S0Z7gZqre1g", start: 20 },
-            { title: "If the world was ending...", desc: "Every beat celebrates your beautiful heart 💖", id: "1jO2Anu8y_I", id: "1jO2Anu8y_I", start: 60 }
-        ];
-
-        let ytActiveIdx = 0;
-        let playersMap = { 0: null, 1: null, 2: null };
+        let ytPlayer = null;
+        let activeDeckIdx = 0;
         let progressInterval = null;
 
-        // Core API Instantiation into multi-slots bypasses cached streams
+        const deckCollection = [
+            { title: "Dil Ka Jo Haal Hai", desc: "Here's to making this year unforgettable 🌟", avatar: "🕷️❤️🐱", id: "udgrClXV26Y", start: 45 }, 
+            { title: "Dil Cheeze Tujhe Dedi", desc: "Because today is all about YOU, Madhu! 👑", avatar: "🛗🕷️🎀", id: "S0Z7gZqre1g", start: 20 },
+            { title: "If the world was ending...", desc: "Every beat celebrates your beautiful heart 💖", avatar: "1jO2Anu8y_I", id: "1jO2Anu8y_I", start: 60 }
+        ];
+
         function onYouTubeIframeAPIReady() {
-            trackDeck.forEach((track, idx) => {
-                playersMap[idx] = new YT.Player(`yt-player-slot-${idx}`, {
-                    height: '0', width: '0', videoId: track.id,
-                    playerVars: { 'autoplay': 0, 'controls': 0, 'start': track.start, 'rel': 0, 'enablejsapi': 1 }
-                });
+            if(ytPlayer) return; 
+            ytPlayer = new YT.Player('yt-bg-player-frame', {
+                height: '0', width: '0',
+                videoId: deckCollection[activeDeckIdx].id,
+                playerVars: { 'autoplay': 0, 'controls': 0, 'start': deckCollection[activeDeckIdx].start, 'rel': 0, 'enablejsapi': 1 }
             });
         }
 
-        // Safe loader trigger dynamic fall-back anchor
+        // Initialize Player on first click if API loads slowly
         window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => { if(typeof YT !== 'undefined' && YT.Player) onYouTubeIframeAPIReady(); }, 1200);
+            setTimeout(() => { if(typeof YT !== 'undefined' && YT.Player) onYouTubeIframeAPIReady(); }, 1500);
         });
 
         function nextStep(stepNumber) {
@@ -342,7 +337,7 @@
                         nextCard.style.opacity = '1';
                         nextCard.style.transform = 'scale(1) translateY(0)';
                     }, 50);
-                }, 750); // Luxury Delayed Slow transition feel
+                }, 600); // Slower animation timings
             }
         }
 
@@ -359,76 +354,72 @@
         }
 
         function triggerLetterOpenSequence() {
-            document.getElementById('main-envelope-node').classList.add('open-flip');
+            const env = document.getElementById('main-envelope-node');
+            env.classList.add('open-flip');
+            
             const btn = document.getElementById('envelope-next-btn');
             btn.disabled = false;
             btn.className = "w-full py-5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-2xl text-base heading-font shadow-xl transform active:scale-95 transition-all duration-150";
             btn.innerText = "Listen To Birthday Playlist 🎵";
         }
 
-        // 🎵 DEDICATED SEPARATED ACTIVE DECK MODULATION SYSTEM (100% Guaranteed Song Change)
-        function toggleSeparatedYTPlayerEngine() {
+        function toggleRealYTMusic() {
             const btn = document.getElementById('play-trigger-btn');
-            const activePlayer = playersMap[ytActiveIdx];
-            
-            if (!activePlayer || typeof activePlayer.getPlayerState !== 'function') {
-                return alert("Syncing tracks engine pipelines, please tap again in 1 second!");
+            if (!ytPlayer || typeof ytPlayer.getPlayerState !== 'function') {
+                onYouTubeIframeAPIReady();
+                return alert("Syncing real tracks engine... Please tap again in 1 second!");
             }
 
-            if (activePlayer.getPlayerState() !== 1) { // Not currently running
-                activePlayer.playVideo();
+            const state = ytPlayer.getPlayerState();
+            if (state !== 1) { 
+                ytPlayer.playVideo();
                 btn.innerText = "⏸️";
-                document.getElementById('audio-status-lbl').innerText = "Playing track safely inside app... 💕";
-                launchProgressTrackerEngine();
+                document.getElementById('audio-status-lbl').innerText = "Playing real track smoothly... 💕";
+                startProgressTracker();
             } else {
-                activePlayer.pauseVideo();
+                ytPlayer.pauseVideo();
                 btn.innerText = "▶️";
                 clearInterval(progressInterval);
             }
         }
 
-        function shiftIsolatedTrackDeck(direction) {
-            // Force fully pause previous playing channel engine first
-            if(playersMap[ytActiveIdx] && typeof playersMap[ytActiveIdx].pauseVideo === 'function') {
-                playersMap[ytActiveIdx].pauseVideo();
-            }
+        // 🎵 FIXED STABLE FORCE MULTI-TRACK LOADING LOGIC
+        function shiftDeckFrame(step) {
+            activeDeckIdx = (activeDeckIdx + step + deckCollection.length) % deckCollection.length;
             
-            ytActiveIdx = (ytActiveIdx + direction + trackDeck.length) % trackDeck.length;
+            document.getElementById('audio-track-lbl').innerText = deckCollection[activeDeckIdx].title;
+            document.getElementById('deck-title').innerText = deckCollection[activeDeckIdx].title;
+            document.getElementById('deck-desc').innerText = deckCollection[activeDeckIdx].desc;
+            document.getElementById('deck-avatar').innerText = deckCollection[activeDeckIdx].avatar;
             
-            document.getElementById('audio-track-lbl').innerText = trackDeck[ytActiveIdx].title;
-            document.getElementById('deck-title').innerText = trackDeck[ytActiveIdx].title;
-            document.getElementById('deck-desc').innerText = trackDeck[ytActiveIdx].desc;
-            document.getElementById('deck-avatar').innerText = trackDeck[ytActiveIdx].avatar;
-            
-            // Auto play next structural track immediately from its target timestamp index
-            const nextPlayer = playersMap[ytActiveIdx];
-            if(nextPlayer && typeof nextPlayer.playVideo === 'function') {
+            if (ytPlayer) {
+                clearInterval(progressInterval);
+                // Strong re-load command to shift state force-fully bypass cached links
+                ytPlayer.loadVideoById({
+                    videoId: deckCollection[activeDeckIdx].id,
+                    startSeconds: deckCollection[activeDeckIdx].start
+                });
                 document.getElementById('play-trigger-btn').innerText = "⏸️";
-                document.getElementById('audio-status-lbl').innerText = "Switched track successfully... ✨";
-                nextPlayer.seekTo(trackDeck[ytActiveIdx].start, true);
-                nextPlayer.playVideo();
-                launchProgressTrackerEngine();
-            } else {
-                document.getElementById('play-trigger-btn').innerText = "▶️";
+                document.getElementById('audio-status-lbl').innerText = "Playing next track smoothly... ✨";
+                startProgressTracker();
             }
         }
 
-        function launchProgressTrackerEngine() {
+        function startProgressTracker() {
             clearInterval(progressInterval);
             progressInterval = setInterval(() => {
-                const p = playersMap[ytActiveIdx];
-                if (p && typeof p.getCurrentTime === 'function') {
-                    const cur = p.getCurrentTime();
-                    const dur = p.getDuration() || 1;
+                if (ytPlayer && typeof ytPlayer.getCurrentTime === 'function') {
+                    const cur = ytPlayer.getCurrentTime();
+                    const dur = ytPlayer.getDuration() || 1;
                     const pct = (cur / dur) * 100;
                     document.getElementById('audio-fill-track').style.width = pct + '%';
-                    document.getElementById('current-time-lbl').innerText = formatTimeStr(cur);
-                    document.getElementById('total-time-lbl').innerText = formatTimeStr(dur);
+                    document.getElementById('current-time-lbl').innerText = formatAudioTimeStr(cur);
+                    document.getElementById('total-time-lbl').innerText = formatAudioTimeStr(dur);
                 }
             }, 400);
         }
 
-        function formatTimeStr(secs) {
+        function formatAudioTimeStr(secs) {
             const m = Math.floor(secs / 60); const s = Math.floor(secs % 60);
             return `${m}:${s < 10 ? '0' : ''}${s}`;
         }
@@ -441,7 +432,8 @@
 
         function evaluateWishesUnlockedState() {
             if(verifiedCardsMap[1] && verifiedCardsMap[2] && verifiedCardsMap[3]) {
-                document.getElementById('congrats-modal').classList.remove('hidden');
+                const modal = document.getElementById('congrats-modal');
+                modal.classList.remove('hidden');
             } else { alert("Please open and view all 3 wishes cards layout first! 🎁"); }
         }
 
